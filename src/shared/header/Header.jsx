@@ -7,6 +7,8 @@ import "./Header.css";
 
 //file imports
 import logo from "/src/assets/logo-white.png";
+import menubar from "/src/assets/menu-bar.png";
+import closemenubar from "/src/assets/menu-x.png";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +27,11 @@ function Header() {
       {isOpen ? (
         <SideBar handleSideBarToggle={handleSideBarToggle} />
       ) : (
-        <button onClick={handleSideBarToggle}>click</button>
+        <img
+          src={menubar}
+          className="open-menu"
+          onClick={handleSideBarToggle}
+        />
       )}
     </header>
   );
@@ -33,23 +39,29 @@ function Header() {
 
 function SideBar({ handleSideBarToggle }) {
   return (
-    <aside className="aside-bar">
-      <nav className={`main-nav`}>
-        <Link className="nav-link" to="/">
-          Home
-        </Link>
-        <Link className="nav-link" to="/about">
-          About
-        </Link>
-        <Link className="nav-link " to="/portfolio">
-          Portfolio
-        </Link>
-        <Link className="nav-link" to="/learn">
-          Learn
-        </Link>
-      </nav>
-      <button onClick={handleSideBarToggle}>click</button>
-    </aside>
+    <div className="closing-div" onClick={handleSideBarToggle}>
+      <aside className="aside-bar">
+        <nav className={`aside-nav`}>
+          <Link className="aside-link" to="/">
+            Home
+          </Link>
+          <Link className="aside-link" to="/about">
+            About
+          </Link>
+          <Link className="aside-link" to="/portfolio">
+            Portfolio
+          </Link>
+          <Link className="aside-link" to="/learn">
+            Learn
+          </Link>
+        </nav>
+        <img
+          src={closemenubar}
+          className="close-menu"
+          onClick={handleSideBarToggle}
+        />
+      </aside>
+    </div>
   );
 }
 // Save for later as desktop

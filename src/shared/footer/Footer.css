@@ -1,0 +1,27 @@
+.footer {
+  /* Gradient from blue (#0000FF) to purple (#800080), bottom left to top right */
+  background: linear-gradient(to bottom right, #364fc7, #5f3dc4);
+  color: #fff;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* Keeps the footer at the bottom */
+  margin-top: auto;
+
+  padding: 10rem 0;
+  font-size: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  gap: 0.4rem;
+  text-decoration: underline;
+}
+.footer-links a {
+  color: #fff;
+  text-decoration: none !important;
+}

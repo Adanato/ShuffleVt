@@ -6,9 +6,9 @@ import About from "./pages/about/About.jsx";
 import Learn from "./pages/learn/Learn.jsx";
 
 // Common component
-import Header from "./shared/Header";
-import Footer from "./shared/Footer";
-import NotFound from "./shared/NotFoundPage";
+import Header from "./shared/header/Header.jsx";
+import Footer from "./shared/footer/Footer.jsx";
+import NotFound from "./shared/notfound/NotFound.jsx";
 
 function App() {
   return (

@@ -1,0 +1,73 @@
+.logo {
+  width: 100%;
+  max-width: 3rem;
+}
+
+.main-header {
+  display: flex;
+
+  /* Content flexbox position */
+  justify-content: space-between;
+  align-items: center;
+
+  /* Inheritance */
+  font-size: 1.2rem;
+
+  /* Container  */
+  padding: 4rem 2rem;
+
+  background-color: black;
+  color: #fff;
+}
+
+.header-container {
+  display: flex;
+
+  /* Positioning */
+  align-items: center;
+  gap: 1.2rem;
+  /* Container */
+  padding: 0.4rem;
+}
+
+.main-header a:-webkit-any-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-nav {
+  display: flex;
+
+  /* Positioning */
+  gap: 2.4rem;
+
+  font-size: 1.2rem;
+
+  /* Container */
+  align-items: center;
+}
+
+.main-nav a:-webkit-any-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Emphasis on contact button */
+.main-nav a:-webkit-any-link:last-child {
+  text-decoration: none;
+  padding: 1rem;
+  color: #fff;
+  background-color: #845ef7;
+  border-radius: 1rem;
+}
+
+/* Side bar component */
+.aside-bar {
+  position: fixed; /* or absolute */
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100vh;
+  background-color: #333;
+  overflow-y: auto;
+}

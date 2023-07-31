@@ -1,13 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 // Main Pages
-import Home from "./pages/HomePage";
-import About from "./pages/AboutPage";
-import Capybara from "./pages/CapybaraPage";
-import Auth from "./pages/AuthPage";
-
-// Sub Pages
-import Post from "./pages/PostPage";
+import Home from "./pages/home/Home.jsx";
+import About from "./pages/about/About.jsx";
+import Learn from "./pages/learn/Learn.jsx";
 
 // Common component
 import Header from "./shared/Header";
@@ -20,10 +16,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/capybara" element={<Capybara />} />
         <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Auth />} />
-        <Route path="/post/:id" element={<Post />} />
+        <Route path="/learn" element={<Learn />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

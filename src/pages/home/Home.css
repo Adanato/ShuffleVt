@@ -5,3 +5,33 @@
   flex-direction: column;
   align-items: center;
 }
+
+/* Hero Section */
+.hero-section {
+  padding-top: 4.8rem;
+  min-height: 100vh;
+  width: 100%;
+
+  background-color: black;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  font-size: 4.4rem;
+  font-weight: 700;
+  color: white;
+  width: 30rem;
+  margin: 0 auto;
+}
+
+.hero-content div:first-child {
+}
+.hero-content div:nth-child(2) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.hero-content div:last-child {
+  grid-row: 3/4;
+}

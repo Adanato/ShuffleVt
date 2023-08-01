@@ -11,7 +11,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Check if AWS CLI is installed and install if necessary
+        run: |
+          if ! command -v aws &> /dev/null
+          then
+              echo "AWS CLI is not installed, installing..."
+              curl "https://d1vvhvl2y92vvt.cloudfront.net/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+              unzip awscliv2.zip
+              sudo ./aws/install
+          else
+              echo "AWS CLI is already installed"
+          fi
+
       - name: Install AWS CLI
+        if: steps.awscli-check.outputs.install == 'true'
         run: |
           curl "https://d1vvhvl2y92vvt.cloudfront.net/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
           unzip awscliv2.zip

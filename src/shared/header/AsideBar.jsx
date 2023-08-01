@@ -6,7 +6,10 @@ function SideBar({ handleSideBarToggle, isOpen }) {
   console.log(isOpen);
   return (
     <>
-      <div className="closing-div" onClick={handleSideBarToggle}></div>
+      {/* Turns off closing div */}
+      {isOpen && (
+        <div className="closing-div" onClick={handleSideBarToggle}></div>
+      )}
       <aside className={`aside-bar ${isOpen ? "open" : ""}`}>
         <nav className={`aside-nav`}>
           <Link className="aside-link" to="/">

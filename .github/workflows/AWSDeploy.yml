@@ -55,4 +55,4 @@ jobs:
           cd ShuffleVT
           git add .
           git commit -m "Commit from GitHub Actions"
-          git push origin master
+          git push origin main

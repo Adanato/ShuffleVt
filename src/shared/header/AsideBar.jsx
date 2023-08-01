@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
-import closemenubar from "/src/assets/menu-x.png";
-
 import "./AsideBar.css";
 
-function SideBar({ handleSideBarToggle }) {
+function SideBar({ handleSideBarToggle, isOpen }) {
+  console.log(isOpen);
   return (
-    <div className="closing-div" onClick={handleSideBarToggle}>
-      <aside className="aside-bar">
+    <>
+      <div className="closing-div" onClick={handleSideBarToggle}></div>
+      <aside className={`aside-bar ${isOpen ? "open" : ""}`}>
         <nav className={`aside-nav`}>
           <Link className="aside-link" to="/">
             Home
@@ -22,13 +22,8 @@ function SideBar({ handleSideBarToggle }) {
             Learn
           </Link>
         </nav>
-        <img
-          src={closemenubar}
-          className="close-menu"
-          onClick={handleSideBarToggle}
-        />
       </aside>
-    </div>
+    </>
   );
 }
 

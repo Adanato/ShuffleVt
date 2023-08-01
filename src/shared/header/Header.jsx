@@ -9,7 +9,7 @@ import "./Header.css";
 //file imports
 import logo from "/src/assets/logo-white.png";
 import menubar from "/src/assets/menu-bar.png";
-
+import closemenubar from "/src/assets/menu-x.png";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,8 +24,15 @@ function Header() {
           <h1>ShuffleVT</h1>
         </div>
       </Link>
+      <SideBar isOpen={isOpen} handleSideBarToggle={handleSideBarToggle} />
       {isOpen ? (
-        <SideBar handleSideBarToggle={handleSideBarToggle} />
+        <>
+          <img
+            src={closemenubar}
+            className="close-menu"
+            onClick={handleSideBarToggle}
+          />
+        </>
       ) : (
         <img
           src={menubar}

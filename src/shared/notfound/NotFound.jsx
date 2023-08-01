@@ -3,7 +3,7 @@ import "./NotFound.css";
 function NotFound() {
   return (
     <main className="not-found-container">
-      <h1>404 Error. Can't shuffle in here</h1>
+      <h2>404 Error. Can't shuffle in here</h2>
     </main>
   );
 }

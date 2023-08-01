@@ -46,8 +46,8 @@ jobs:
 
       - name: Copy code to CodeCommit repository
         run: |
-          cp -R ./* ShuffleVT/
+          rsync -av --progress ./* ShuffleVT/ --exclude ShuffleVT
           cd ShuffleVT
           git add .
           git commit -m "Commit from GitHub Actions"
-          git push origin main
+          git push origin master

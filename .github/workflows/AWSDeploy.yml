@@ -44,6 +44,11 @@ jobs:
       - name: Clone CodeCommit repository
         run: git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/ShuffleVT
 
+      - name: Set up Git user information
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
       - name: Copy code to CodeCommit repository
         run: |
           rsync -av --progress ./* ShuffleVT/ --exclude ShuffleVT

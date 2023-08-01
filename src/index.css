@@ -37,6 +37,7 @@ shade:
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 1rem;
 }
 
 /* Setting 1 rem = 10px */
@@ -51,6 +52,10 @@ body {
   line-height: 1;
   font-weight: 500;
   color: #fff;
-  font-size: 1.2rem;
+
   overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2.4rem;
 }

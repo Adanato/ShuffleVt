@@ -3,8 +3,6 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <span>&copy; 2023 ShuffleVT.com All rights reserved.</span>
-
       <ul className="footer-links">
         <li>
           <a href="#">Instagram </a>
@@ -12,7 +10,11 @@ function Footer() {
         <li>
           <a href="#">LinkedIn</a>
         </li>
+        <li>
+          <a href="#">GobblerConnect</a>
+        </li>
       </ul>
+      <span>&copy; 2023 ShuffleVT.com All rights reserved.</span>
     </footer>
   );
 }

@@ -1,0 +1,40 @@
+name: Deploy to AWS CodeCommit
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install AWS CLI
+        run: |
+          curl "https://d1vvhvl2y92vvt.cloudfront.net/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
+
+      - name: Configure AWS credentials
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws configure set default.region us-east-1
+
+      - name: Configure git to use the AWS CLI for CodeCommit
+        run: |
+          git config --global credential.helper '!aws codecommit credential-helper $@'
+          git config --global credential.UseHttpPath true
+
+      - name: Clone CodeCommit repository
+        run: git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/ShuffleVT
+
+      - name: Copy code to CodeCommit repository
+        run: |
+          cp -R ./* my-repo/
+          cd my-repo
+          git add .
+          git commit -m "Commit from GitHub Actions"
+          git push origin main

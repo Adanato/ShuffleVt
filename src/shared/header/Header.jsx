@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import SideBar from "./AsideBar";
 // CSS imports
 import "./Header.css";
 
@@ -9,7 +10,6 @@ import "./Header.css";
 import logo from "/src/assets/logo-white.png";
 import menubar from "/src/assets/menu-bar.png";
 import closemenubar from "/src/assets/menu-x.png";
-
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,8 +24,15 @@ function Header() {
           <h1>ShuffleVT</h1>
         </div>
       </Link>
+      <SideBar isOpen={isOpen} handleSideBarToggle={handleSideBarToggle} />
       {isOpen ? (
-        <SideBar handleSideBarToggle={handleSideBarToggle} />
+        <>
+          <img
+            src={closemenubar}
+            className="close-menu"
+            onClick={handleSideBarToggle}
+          />
+        </>
       ) : (
         <img
           src={menubar}
@@ -37,33 +44,6 @@ function Header() {
   );
 }
 
-function SideBar({ handleSideBarToggle }) {
-  return (
-    <div className="closing-div" onClick={handleSideBarToggle}>
-      <aside className="aside-bar">
-        <nav className={`aside-nav`}>
-          <Link className="aside-link" to="/">
-            Home
-          </Link>
-          <Link className="aside-link" to="/about">
-            About
-          </Link>
-          <Link className="aside-link" to="/portfolio">
-            Portfolio
-          </Link>
-          <Link className="aside-link" to="/learn">
-            Learn
-          </Link>
-        </nav>
-        <img
-          src={closemenubar}
-          className="close-menu"
-          onClick={handleSideBarToggle}
-        />
-      </aside>
-    </div>
-  );
-}
 // Save for later as desktop
 
 /* function NavBar() {

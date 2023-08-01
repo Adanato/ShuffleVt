@@ -1,7 +1,7 @@
 import "./Learn.css";
 
 function Learn() {
-  return;
+  return <main className="learn-main"></main>;
 }
 
 export default Learn;

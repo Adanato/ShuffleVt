@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import Home from "./pages/home/Home.jsx";
 import About from "./pages/about/About.jsx";
 import Learn from "./pages/learn/Learn.jsx";
-
+import Portfolio from "./pages/portfolio/Portfolio.jsx";
 // Common component
 import Header from "./shared/header/Header.jsx";
 import Footer from "./shared/footer/Footer.jsx";
@@ -18,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/learn" element={<Learn />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

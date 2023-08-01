@@ -14,8 +14,15 @@
 
   background-color: black;
 }
-
 .hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 70vh;
+}
+.hero-text {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
@@ -26,12 +33,49 @@
   margin: 0 auto;
 }
 
-.hero-content div:first-child {
+.hero-text div:first-child {
+  text-shadow: 6px 5px 0 rgb(14, 165, 233, 0.75);
 }
-.hero-content div:nth-child(2) {
-  grid-column: 1/2;
-  grid-row: 2/3;
+
+.hero-text div:nth-child(2) {
+  text-shadow: 21px 10px 0 rgba(59, 130, 246, 0.6);
 }
-.hero-content div:last-child {
+
+.hero-text div:last-child {
+  text-shadow: 35px 15px rgba(99, 102, 241, 0.3);
   grid-row: 3/4;
+}
+
+.hero-section img {
+  max-width: 30rem;
+}
+
+.cta-box {
+  padding: 1rem 5rem;
+  border: 0.2rem solid white;
+}
+.cta-box a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.cta-box:hover {
+  background-color: rgb(59, 130, 246);
+  padding: 1rem 5rem;
+  border: 0.2rem solid rgb(59, 130, 246);
+  box-sizing: 0, 0, 10px, 10px, rgb(59, 130, 246, 0.2);
+}
+.cta-box:hover a {
+  font-weight: 700;
+}
+.cta-box:active {
+  border: 0.2rem solid white;
+}
+
+/* Gallery CSS */
+iframe {
+  width: 100%;
+  height: auto;
 }

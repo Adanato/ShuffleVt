@@ -1,7 +1,7 @@
 import "./Portfolio.css";
 
 function Portfolio() {
-  return;
+  return <main className="portfolio-main"></main>;
 }
 
 export default Portfolio;

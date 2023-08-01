@@ -12,13 +12,16 @@
   /* Keeps the footer at the bottom */
   margin-top: auto;
 
-  padding: 10rem 0;
+  padding: 5rem 0;
   font-size: 1rem;
+  gap: 2.4rem;
 }
 
 .footer-links {
+  display: flex;
+  flex-direction: column;
   list-style: none;
-  gap: 0.4rem;
+  gap: 1.2rem;
   text-decoration: none;
 }
 .footer-links a {

@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm ci
+
+  pre_build:
+    commands:
+      - echo Pre-build phase...
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build
+
+artifacts:
+  files:
+    - "**/*"
+  base-directory: "dist"

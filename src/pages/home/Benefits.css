@@ -22,17 +22,10 @@
   flex-direction: column;
   gap: 4.8rem;
 }
-.benefits-list li {
-  display: flex;
-  align-items: center;
-  gap: 3.6rem;
-  list-style: none;
-  font-size: 1.8rem;
-}
-.benefits-list li img {
+
+.accordion-img {
   width: 40px;
 }
-
 .accordion-item {
   display: flex;
   flex-direction: column;
@@ -41,6 +34,7 @@
 .accordion-item header {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 3.6rem;
   list-style: none;
   font-size: 1.8rem;

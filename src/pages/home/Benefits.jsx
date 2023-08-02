@@ -13,22 +13,26 @@ function Benefits() {
       <div className="benefits-content">
         <h2>Why Shuffle?</h2>
         <ul className="benefits-list">
-          <AccordionItem />
-          <li>
-            <img src={shoe} alt="shoe icon" />
-            Impressive Moves
-          </li>
-          <li>
-            <img src={music} alt="music icon" />
-            Music Versatility
-          </li>
+          <AccordionItem img={fire} alt="fire icon" title="Great Cardio">
+            Shuffling improves cardio health and works about your core and lower
+            body
+          </AccordionItem>
+
+          <AccordionItem img={shoe} alt="shoe icon" title="Impressive Moves">
+            Shuffling improves cardio health and works about your core and lower
+            body
+          </AccordionItem>
+          <AccordionItem img={music} alt="music icon" title="Music Versatility">
+            Shuffling improves cardio health and works about your core and lower
+            body
+          </AccordionItem>
         </ul>
       </div>
     </section>
   );
 }
 
-function AccordionItem() {
+function AccordionItem({ img, alt, children, title }) {
   const [isOpen, setIsOpen] = useState(false);
   function handleOpen() {
     setIsOpen((isOpen) => !isOpen);
@@ -36,15 +40,10 @@ function AccordionItem() {
   return (
     <li className="accordion-item" onClick={handleOpen}>
       <header>
-        <img src={fire} alt="fire icon" />
-        Great Cardio
+        <img className="accordion-img" src={img} alt={alt} />
+        {title}
       </header>
-      {isOpen && (
-        <div className="accordion-content">
-          Shuffling improves cardio health and works about your core and lower
-          body
-        </div>
-      )}
+      {isOpen && <div className="accordion-content">{children}</div>}
     </li>
   );
 }

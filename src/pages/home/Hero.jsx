@@ -1,3 +1,5 @@
+import "./Hero.css";
+
 // Simple text with call to action
 function Hero() {
   return (

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import "./Benefits.css";
 
 // import gobblerConnect from "/src/assets/gclogo.png";
@@ -11,10 +13,7 @@ function Benefits() {
       <div className="benefits-content">
         <h2>Why Shuffle?</h2>
         <ul className="benefits-list">
-          <li>
-            <img src={fire} alt="fire icon" />
-            Great Cardio
-          </li>
+          <AccordionItem />
           <li>
             <img src={shoe} alt="shoe icon" />
             Impressive Moves
@@ -26,6 +25,27 @@ function Benefits() {
         </ul>
       </div>
     </section>
+  );
+}
+
+function AccordionItem() {
+  const [isOpen, setIsOpen] = useState(false);
+  function handleOpen() {
+    setIsOpen((isOpen) => !isOpen);
+  }
+  return (
+    <li className="accordion-item" onClick={handleOpen}>
+      <header>
+        <img src={fire} alt="fire icon" />
+        Great Cardio
+      </header>
+      {isOpen && (
+        <div className="accordion-content">
+          Shuffling improves cardio health and works about your core and lower
+          body
+        </div>
+      )}
+    </li>
   );
 }
 

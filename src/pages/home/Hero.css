@@ -41,26 +41,26 @@
   max-width: 30rem;
 }
 
-.cta-box {
+.hero-content a {
   padding: 1rem 5rem;
   border: 0.2rem solid white;
 }
-.cta-box a {
+.cta-box {
   color: white;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 500;
 }
 
-.cta-box:hover {
+.hero-content a:hover {
   background-color: rgb(59, 130, 246);
   padding: 1rem 5rem;
   border: 0.2rem solid rgb(59, 130, 246);
   box-sizing: 0, 0, 10px, 10px, rgb(59, 130, 246, 0.2);
 }
-.cta-box:hover a {
+.hero-content a:hover .cta-box {
   font-weight: 700;
 }
-.cta-box:active {
+.hero-content a:active {
   border: 0.2rem solid white;
 }

@@ -10,6 +10,7 @@ import "./Header.css";
 import logo from "/src/assets/logo-white.png";
 import menubar from "/src/assets/menu-bar.png";
 import closemenubar from "/src/assets/menu-x.png";
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,18 +28,22 @@ function Header() {
       <SideBar isOpen={isOpen} handleSideBarToggle={handleSideBarToggle} />
       {isOpen ? (
         <>
-          <img
-            src={closemenubar}
-            className="close-menu"
-            onClick={handleSideBarToggle}
-          />
+          <button>
+            <img
+              src={closemenubar}
+              className="close-menu"
+              onClick={handleSideBarToggle}
+            />
+          </button>
         </>
       ) : (
-        <img
-          src={menubar}
-          className="open-menu"
-          onClick={handleSideBarToggle}
-        />
+        <button>
+          <img
+            src={menubar}
+            className="open-menu"
+            onClick={handleSideBarToggle}
+          />
+        </button>
       )}
     </header>
   );

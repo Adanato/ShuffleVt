@@ -11,16 +11,14 @@ function Hero() {
           <div>Repeat</div>
         </div>
         {/* <img src={gobblerConnect} alt="gobbler connect logo image" /> */}
-        <div className="cta-box">
-          <a
-            href="https://gobblerconnect.vt.edu/organization/shuffle"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta-link"
-          >
-            Join Us
-          </a>
-        </div>
+        <a
+          href="https://gobblerconnect.vt.edu/organization/shuffle"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-link"
+        >
+          <button className="cta-box">Join Us</button>
+        </a>
       </div>
     </section>
   );

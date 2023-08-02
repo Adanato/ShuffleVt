@@ -69,10 +69,10 @@ function AccordionItem({
 
   return (
     <li className="accordion-item" onClick={handleOpen}>
-      <header>
+      <button>
         <img className="accordion-img" src={img} alt={alt} />
         {title}
-      </header>
+      </button>
       {openItem === id && <div className="accordion-content">{children}</div>}
     </li>
   );

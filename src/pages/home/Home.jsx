@@ -99,4 +99,5 @@ function Gallery() {
     </section>
   );
 }
+
 export default Home;

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-import "./AsideBar.css";
+import "./Aside.css";
 
-function SideBar({ handleSideBarToggle, isOpen }) {
+function Aside({ handleSideBarToggle, isOpen }) {
   console.log(isOpen);
   return (
     <>
@@ -30,4 +30,4 @@ function SideBar({ handleSideBarToggle, isOpen }) {
   );
 }
 
-export default SideBar;
+export default Aside;

@@ -52,6 +52,7 @@ body {
   font-weight: 400;
   font-size: 1rem;
   overflow-x: hidden;
+  background-color: black;
 }
 
 h1 {

@@ -18,11 +18,11 @@ function Aside({ handleSideBarToggle, isOpen }) {
           <Link className="aside-link" to="/about">
             About
           </Link>
-          <Link className="aside-link" to="/portfolio">
-            Portfolio
-          </Link>
           <Link className="aside-link" to="/learn">
             Learn
+          </Link>
+          <Link className="aside-link" to="/portfolio">
+            Dancers
           </Link>
         </nav>
       </aside>

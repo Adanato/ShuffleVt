@@ -1,3 +1,5 @@
+import "./Benefits.css";
+
 // import gobblerConnect from "/src/assets/gclogo.png";
 import fire from "/src/assets/fire.svg";
 import shoe from "/src/assets/shoe.svg";

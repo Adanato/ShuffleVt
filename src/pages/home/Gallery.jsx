@@ -1,4 +1,5 @@
 import "./Gallery.css";
+
 // Display shuffling videos
 function Gallery() {
   return (

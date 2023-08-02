@@ -17,10 +17,6 @@ phases:
       - echo Build started on `date`
       - npm run build
 
-  post_build:
-    commands:
-      - aws cloudfront create-invalidation --distribution-id E3VLCM2XPEY8FB --paths /index.html
-
 artifacts:
   files:
     - "dist/**/*"

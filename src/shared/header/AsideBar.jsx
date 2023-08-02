@@ -12,16 +12,28 @@ function Aside({ handleSideBarToggle, isOpen }) {
       )}
       <aside className={`aside-bar ${isOpen ? "open" : ""}`}>
         <nav className={`aside-nav`}>
-          <Link className="aside-link" to="/">
+          <Link onClick={handleSideBarToggle} className="aside-link" to="/">
             Home
           </Link>
-          <Link className="aside-link" to="/about">
+          <Link
+            onClick={handleSideBarToggle}
+            className="aside-link"
+            to="/about"
+          >
             About
           </Link>
-          <Link className="aside-link" to="/learn">
+          <Link
+            onClick={handleSideBarToggle}
+            className="aside-link"
+            to="/learn"
+          >
             Learn
           </Link>
-          <Link className="aside-link" to="/portfolio">
+          <Link
+            onClick={handleSideBarToggle}
+            className="aside-link"
+            to="/portfolio"
+          >
             Dancers
           </Link>
         </nav>

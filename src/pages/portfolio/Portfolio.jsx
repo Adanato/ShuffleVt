@@ -11,7 +11,8 @@ function Portfolio() {
 function Dancers() {
   return (
     <section className="dancers-section">
-      Join Us on GobblerConnect and be one of the first
+      Join us on GobblerConnect <br />
+      and be one of the first
     </section>
   );
 }

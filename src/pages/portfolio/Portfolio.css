@@ -5,3 +5,8 @@
   flex-direction: column;
   align-items: center;
 }
+
+.dancers-section {
+  margin: auto;
+  font-size: 2rem;
+}

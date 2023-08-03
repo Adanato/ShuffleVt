@@ -1,6 +1,7 @@
 /* Benefits Section */
 .benefits-section {
   width: 100%;
+  max-width: 30rem;
   color: white;
   margin-bottom: 30rem;
 }

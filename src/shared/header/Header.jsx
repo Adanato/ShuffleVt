@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import SideBar from "./AsideBar";
+import Aside from "./Aside";
 // CSS imports
 import "./Header.css";
 
@@ -25,7 +25,7 @@ function Header() {
           <h1>ShuffleVT</h1>
         </div>
       </Link>
-      <SideBar isOpen={isOpen} handleSideBarToggle={handleSideBarToggle} />
+      <Aside isOpen={isOpen} handleSideBarToggle={handleSideBarToggle} />
       {isOpen ? (
         <>
           <button>

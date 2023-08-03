@@ -1,0 +1,36 @@
+.cta-section {
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-link {
+  display: inline-block;
+  margin: auto;
+  padding: 1rem 5rem;
+  border: 0.2rem solid white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cta-box {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.cta-link:hover {
+  background-color: rgb(59, 130, 246);
+  border: 0.2rem solid rgb(59, 130, 246);
+  box-shadow: 0 0 15px 10px rgba(59, 130, 246, 0.2);
+}
+
+.cta-link:hover .cta-box {
+  font-weight: 700;
+}
+
+.cta-link:active {
+  border: 0.2rem solid white;
+}
